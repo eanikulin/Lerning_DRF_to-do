@@ -6,7 +6,7 @@ from .models import Users
 
 class UsersSerializer(serializers.ModelSerializer):
 # class UsersSerializer(HyperlinkedModelSerializer):
-    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+#     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     class Meta:
         model = Users
