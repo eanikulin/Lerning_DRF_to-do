@@ -12,7 +12,6 @@ class Users(models.Model):
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     cat = models.ForeignKey('Category', on_delete=models.PROTECT, null=True)
-
     # user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
 
     def __str__(self):
