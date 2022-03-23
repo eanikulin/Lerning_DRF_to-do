@@ -19,6 +19,7 @@ from django.urls import path, include, re_path
 from rest_framework.routers import DefaultRouter
 from users.views import UsersCustomViewSet
 from main.views import ProjectViewSet, ToDoViewSet
+from rest_framework.authtoken import views
 
 router = DefaultRouter()
 router.register('users', UsersCustomViewSet)
@@ -29,6 +30,7 @@ router.register('todos', ToDoViewSet)
 urlpatterns = [
    path('admin/', admin.site.urls),
    path('api-auth/', include('rest_framework.urls')),
+   path('api-token-auth/', views.obtain_auth_token),
    path('api-tokauth/', include('djoser.urls')),
    re_path(r'^auth/', include('djoser.urls.authtoken')),
    path('api/', include(router.urls)),
