@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework.authtoken',
     'djoser',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -146,4 +147,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
     ],
 
+    # 'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
+    # 'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
+    # 'DEFAULT_VERSIONING_CLASS':'rest_framework.versioning.AcceptHeaderVersioning,
+    'DEFAULT_VERSIONING_CLASS':'rest_framework.versioning.QueryParameterVersioning',
 }
