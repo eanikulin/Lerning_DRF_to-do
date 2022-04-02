@@ -42,4 +42,5 @@ class ToDoViewSet(ModelViewSet):
         if self.request.method in ['GET']:
             return ToDoSerializer
         return ToDoSerializerBase
+# 
 # todo Пометка тестовая
