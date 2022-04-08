@@ -1,6 +1,7 @@
 import graphene
 from graphene_django import DjangoObjectType
-from main.models import ToDo, Project, Users
+from main.models import ToDo, Project
+from users.models import Users
 
 class UserType(DjangoObjectType):
     class Meta:
